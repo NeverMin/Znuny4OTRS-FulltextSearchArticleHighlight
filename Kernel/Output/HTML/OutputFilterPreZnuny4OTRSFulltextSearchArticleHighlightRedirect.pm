@@ -17,9 +17,11 @@ sub new {
 
     # check needed objects
     NEEDED:
-    for my $Needed (qw( Action ParamObject LayoutObject )) {
+    for my $Needed (qw( ParamObject LayoutObject )) {
         $Self->{$Needed} = $Param{$Needed} || die "Got no $Needed!";
     }
+
+    $Self->{Action} = $Param{Action} || '';
 
     return $Self;
 }
