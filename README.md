@@ -2,7 +2,7 @@
 
 Fulltext Search Article Highlight
 =================
-With this extention you will be able to affected articles of a fulltext search.
+With this extention you will be able to highlight affected articles of a fulltext search.
 
 **Prerequisites**
 
