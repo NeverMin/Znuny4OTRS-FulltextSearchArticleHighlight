@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<otrs_config version="1.0" init="Config">
+    <ConfigItem Name="Frontend::Output::FilterElementPre###OutputFilterPreZnuny4OTRSFulltextSearchArticleHighlight" Required="0" Valid="1">
+        <Description Translatable="1">This configuration registers an OutputFilter module that adds the fulltext parameter to the AgentTicketZoom link.</Description>
+        <Group>Znuny4OTRS-FulltextSearchArticleHighlight</Group>
+        <SubGroup>Core::Web</SubGroup>
+            <Setting>
+                <Hash>
+                    <Item Key="Module">Kernel::Output::HTML::OutputFilterPreZnuny4OTRSFulltextSearchArticleHighlight</Item>
+                    <Item Key="Templates">
+                        <Hash>
+                            <Item Key="AgentTicketOverviewSmall">1</Item>
+                            <Item Key="AgentTicketOverviewMedium">1</Item>
+                            <Item Key="AgentTicketOverviewPreview">1</Item>
+                        </Hash>
+                    </Item>
+                </Hash>
+            </Setting>
+    </ConfigItem>
+    <ConfigItem Name="Frontend::Output::FilterElementPre###OutputFilterPreZnuny4OTRSFulltextSearchArticleHighlightRedirect" Required="0" Valid="1">
+        <Description Translatable="1">This configuration registers an OutputFilter module that adds the fulltext parameter to the redirect template link.</Description>
+        <Group>Znuny4OTRS-FulltextSearchArticleHighlight</Group>
+        <SubGroup>Core::Web</SubGroup>
+            <Setting>
+                <Hash>
+                    <Item Key="Module">Kernel::Output::HTML::OutputFilterPreZnuny4OTRSFulltextSearchArticleHighlightRedirect</Item>
+                    <Item Key="Templates">
+                        <Hash>
+                            <Item Key="Redirect">1</Item>
+                        </Hash>
+                    </Item>
+                </Hash>
+            </Setting>
+    </ConfigItem>
+    <ConfigItem Name="Frontend::Output::FilterElementPre###OutputFilterPreZnuny4OTRSFulltextSearchArticleHighlightZoom" Required="0" Valid="1">
+        <Description Translatable="1">This configuration registers an OutputFilter module that marks the article rows in the zoom with their ArticleIDs.</Description>
+        <Group>Znuny4OTRS-FulltextSearchArticleHighlight</Group>
+        <SubGroup>Core::Web</SubGroup>
+            <Setting>
+                <Hash>
+                    <Item Key="Module">Kernel::Output::HTML::OutputFilterPreZnuny4OTRSFulltextSearchArticleHighlightZoom</Item>
+                    <Item Key="Templates">
+                        <Hash>
+                            <Item Key="AgentTicketZoom">1</Item>
+                        </Hash>
+                    </Item>
+                </Hash>
+            </Setting>
+    </ConfigItem>
+    <ConfigItem Name="Frontend::Output::FilterElementPost###OutputFilterPostZnuny4OTRSFulltextSearchArticleHighlightZoom" Required="0" Valid="1">
+        <Description Translatable="1">This configuration registers an OutputFilter module that highlights the article rows and removes the added marker.</Description>
+        <Group>Znuny4OTRS-FulltextSearchArticleHighlight</Group>
+        <SubGroup>Core::Web</SubGroup>
+            <Setting>
+                <Hash>
+                    <Item Key="Module">Kernel::Output::HTML::OutputFilterPostZnuny4OTRSFulltextSearchArticleHighlightZoom</Item>
+                    <Item Key="Templates">
+                        <Hash>
+                            <Item Key="AgentTicketZoom">1</Item>
+                        </Hash>
+                    </Item>
+                </Hash>
+            </Setting>
+    </ConfigItem>
+
+    <ConfigItem Name="Ticket::CustomModule###001-Znuny4OTRSFulltextSearchArticleHighlight" Required="0" Valid="1">
+        <Description Translatable="1">This configuration registers a custom ticket module that adds a function to Kernel::System::Ticket to get the ArticleIDs for a fulltext search for a ticket.</Description>
+        <Group>Znuny4OTRS-FulltextSearchArticleHighlight</Group>
+        <SubGroup>Core::Ticket</SubGroup>
+        <Setting>
+            <String Regex="">Kernel::System::Ticket::Znuny4OTRSFulltextSearchArticleHighlight</String>
+        </Setting>
+    </ConfigItem>
+</otrs_config>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<otrs_package version="1.0">
+
+    <Name>Znuny4OTRS-FulltextSearchArticleHighlight</Name>
+
+    <Version>1.0.0</Version>
+    <ChangeLog Version="1.0.0" Date="2014-08-18 15:28:18 +0200">Initial release.</ChangeLog>
+
+    <Framework>3.3.x</Framework>
+
+    <Vendor>Znuny GmbH</Vendor>
+    <URL>http://znuny.com/</URL>
+    <License>GNU AFFERO GENERAL PUBLIC LICENSE Version 3, November 2007</License>
+
+    <Description Lang="en">This package contains the functionality to highlight articles matching a fulltext search.</Description>
+    <Description Lang="de">Dieses Paket enthält die Funktionalität um Artikel hervorzuheben, die einer Volltextsuche entsprechen.</Description>
+
+    <PackageRequired Version="1.0.9">Znuny4OTRS-Repo</PackageRequired>
+
+    <Filelist>
+        <File Permission="644" Location="Kernel/Config/Files/Znuny4OTRSFulltextSearchArticleHighlight.xml"/>
+        <File Permission="644" Location="Kernel/Language/de_Znuny4OTRSFulltextSearchArticleHighlight.pm"/>
+        <File Permission="644" Location="Kernel/Output/HTML/OutputFilterPostZnuny4OTRSFulltextSearchArticleHighlightZoom.pm"/>
+        <File Permission="644" Location="Kernel/Output/HTML/OutputFilterPreZnuny4OTRSFulltextSearchArticleHighlight.pm"/>
+        <File Permission="644" Location="Kernel/Output/HTML/OutputFilterPreZnuny4OTRSFulltextSearchArticleHighlightRedirect.pm"/>
+        <File Permission="644" Location="Kernel/Output/HTML/OutputFilterPreZnuny4OTRSFulltextSearchArticleHighlightZoom.pm"/>
+        <File Permission="644" Location="Kernel/System/Ticket/Znuny4OTRSFulltextSearchArticleHighlight.pm"/>
+    </Filelist>
+
+</otrs_package>
